@@ -1,6 +1,6 @@
 # The Visibility Gap — Kraken withdrawal-review communications
 
-Independent proof-of-work by **Felipe Mattos**. This is a job-interest portfolio study, **not a consulting or service pitch**. Not affiliated with Kraken.
+An independent study by **Felipe Mattos**, put together while learning more about Kraken. It follows a question about communication during withdrawal reviews, connects public sources with a synthetic data model, and sketches a possible customer experience. Not affiliated with Kraken.
 
 ## Business question
 Can approved status and next-step communication across manual withdrawal reviews become more consistent without weakening security?
@@ -44,7 +44,7 @@ The original CSV has 800 unique IDs, 232 injected exception rows and zero union-
 ```bash
 python -m http.server 8765
 ```
-Open `http://localhost:8765/site/`. GitHub Pages uses the root redirect to `site/`. The page has no build step or third-party asset dependencies.
+Open `http://localhost:8765/site/`. GitHub Pages uses the root redirect to `site/`. The page has no build step. Images and IBM Plex Sans fonts are bundled locally; artwork and design research are documented in `docs/VISUAL-NOTES.md`.
 
 Proposed evaluation: define permitted communication states with Risk/Compliance/Support, audit message consistency, and only test approved improvements. Primary metric: 7-day repeat support contacts per eligible review. Guardrails: fraud, customer understanding, support accessibility, complaints and improper disclosure.
 
