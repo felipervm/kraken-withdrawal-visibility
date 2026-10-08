@@ -70,3 +70,6 @@ The strongest outreach framing is an invitation to critique a bounded hypothesis
 
 ## Attribution and boundaries
 No production data, personal information, confidential procedures, actual incident counts or causal savings claims. UI is a concept, not a depiction of the current Kraken experience.
+
+## Event-derived demonstration (additional)
+`analysis/event_consistency_demo.py` constructs four completely synthetic cases with an approved reference state and example app/email observations. It derives stale-state, cross-channel mismatch and unsafe-reference exceptions from timestamps, observed values and a hypothetical permission flag rather than pre-labeled QA flags. The tolerance is illustrative, not Kraken policy. This is a **demonstration of logic**, not analysis of production logs; real permissible fields and state semantics require approval from Risk, Compliance, Security and Support.
