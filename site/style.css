@@ -20,3 +20,21 @@ h1,h2,h3{font-weight:500;letter-spacing:-.045em}.brand{font-family:Arial,Helveti
 @media(max-width:640px){header .brand span{display:none}header nav a{white-space:nowrap;font-size:12px}header nav{gap:18px}}
 @media(max-width:380px){.hero h1{font-size:34px}.hero-body{padding-bottom:70px}.hero-bottom{gap:20px}.hero-bottom p{font-size:15px}}
 
+
+/* Quiet motion: cards respond to the pointer without competing with the study. */
+.method-grid article,.validation-grid article,.visual-card{transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s ease,border-color .4s ease,background-color .4s ease}
+@media(hover:hover) and (pointer:fine){.method-grid article:hover,.validation-grid article:hover,.visual-card:hover{transform:perspective(1000px) translateY(-5px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));box-shadow:0 20px 38px #23103912}.method-grid article:hover{background:#2e1f46;border-color:#b58adb80}.validation-grid article:hover{background:#e8def5}.visual-card:hover{border-color:#b997e7}.artifact-list a:hover{padding-left:14px}.round-link:hover{transform:translateY(4px);background:#7132f566}}
+.artifact-list a,.contact-link,.round-link,.text-link,summary{transition:background-color .35s ease,color .35s ease,transform .45s cubic-bezier(.22,1,.36,1),padding .45s cubic-bezier(.22,1,.36,1)}
+a:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #b791f8;outline-offset:6px;border-radius:6px}
+.visual-card img{animation:channel-drift 14s ease-in-out infinite alternate;animation-play-state:paused;transform-origin:50% 45%;clip-path:inset(0)}
+.visual-card.motion-visible img{animation-play-state:running}
+@keyframes channel-drift{from{transform:scale(1)}to{transform:scale(1.035) translateY(-3px)}}
+.hero{animation:hero-drift 24s ease-in-out infinite alternate;animation-play-state:paused}
+.hero.motion-visible{animation-play-state:running}
+@keyframes hero-drift{from{background-position:100% 50%}to{background-position:96% 48%}}
+summary span{display:inline-block;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+details[open] summary span{transform:rotate(45deg)}
+details[open]>p{animation:detail-enter .4s cubic-bezier(.22,1,.36,1) both}
+@keyframes detail-enter{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){@keyframes hero-drift{from{background-position:70% 50%}to{background-position:73% 50%}}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.method-grid article,.validation-grid article,.visual-card,.visual-card img,.round-link:hover{transform:none!important}}
