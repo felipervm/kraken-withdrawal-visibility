@@ -1,0 +1,19 @@
+{
+  "dataset": "Entirely synthetic demonstration; not derived from Kraken data",
+  "seed": 42,
+  "rows": 800,
+  "fields": {
+    "case_id": "Artificial case identifier",
+    "review_type": "scheduled_hold | manual_review | transient_display",
+    "status_stale": "Injected binary quality exception",
+    "missing_support_reference": "Injected binary quality exception (only simulated)",
+    "cross_channel_mismatch": "Injected binary quality exception",
+    "missed_permitted_update": "Injected binary quality exception",
+    "repeat_contacts_7d": "Simulated count, not a real contact metric",
+    "communication_exception": "Boolean OR of all four quality flags"
+  },
+  "notes": [
+    "Arbitrary injected rates; not empirical measurements",
+    "No PII, secret risk scoring, customer records or internal Kraken data"
+  ]
+}
