@@ -5,6 +5,9 @@ An independent study by **Felipe Mattos**, put together while learning more abou
 ## Business question
 Can approved status and next-step communication across manual withdrawal reviews become more consistent without weakening security?
 
+## Career intent
+I built this independent study to demonstrate how I approach data, operations and product questions while seeking to work **inside Kraken**. It is not a service or consulting pitch.
+
 ## Live study
 https://felipervm.github.io/kraken-withdrawal-visibility/
 
@@ -15,6 +18,7 @@ https://felipervm.github.io/kraken-withdrawal-visibility/
 - `analysis/withdrawal_visibility.ipynb` — reproducible quality checks and analysis
 - `analysis/qa_queries.sql` — portable SQL examples
 - `analysis/validate.py` — CSV contracts and cross-checks using SQLite
+- `analysis/event_consistency_demo.py` — derive cross-channel exceptions from illustrative synthetic events
 - `analysis/generate_fixture.py` — deterministic additional fixture generator
 - `data/generated_review_cases.csv` — additional generated fixture; does not reconstruct original rows
 - `docs/RESEARCH.md` — evidence, competing explanations and proposed validation
@@ -23,6 +27,7 @@ https://felipervm.github.io/kraken-withdrawal-visibility/
 From the repository root, these checks require only Python's standard library:
 ```bash
 python analysis/validate.py
+python analysis/event_consistency_demo.py
 python analysis/generate_fixture.py
 python analysis/validate.py data/generated_review_cases.csv
 ```
@@ -49,3 +54,6 @@ Open `http://localhost:8765/site/`. GitHub Pages uses the root redirect to `site
 Proposed evaluation: define permitted communication states with Risk/Compliance/Support, audit message consistency, and only test approved improvements. Primary metric: 7-day repeat support contacts per eligible review. Guardrails: fraud, customer understanding, support accessibility, complaints and improper disclosure.
 
 © Felipe Mattos — Independent educational study, not affiliated with Kraken.
+
+## Sharing
+The website includes a canonical URL, social sharing metadata and an FM favicon. The sharing image is existing editorial artwork and may be cropped by social platforms. GitHub Pages must be enabled for previews to resolve.
