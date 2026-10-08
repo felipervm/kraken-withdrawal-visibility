@@ -1,10 +1,11 @@
 {
   "dataset": "Entirely synthetic demonstration; not derived from Kraken data",
   "seed": 42,
+  "seed_provenance": "Original seed is documented but original generator was not supplied. Additional generated_review_cases.csv uses the checked-in generator with seed 42; it does not reconstruct original rows.",
   "rows": 800,
   "fields": {
     "case_id": "Artificial case identifier",
-    "review_type": "scheduled_hold | manual_review | transient_display",
+    "review_type": "scheduled_hold | manual_review | transient_display; all simulated, transient_display is an invented category not a Kraken-documented cause",
     "status_stale": "Injected binary quality exception",
     "missing_support_reference": "Injected binary quality exception (only simulated)",
     "cross_channel_mismatch": "Injected binary quality exception",
