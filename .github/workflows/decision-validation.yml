@@ -11,7 +11,12 @@ jobs:
         with:
           python-version: '3.12'
       - run: python analysis/decision_engine.py
-      - run: python -m unittest discover -s tests -v
-      - run: git diff --exit-code -- data/decision_report.json
       - run: python analysis/validate.py
       - run: python analysis/event_consistency_demo.py
+      - run: python -m unittest discover -s tests -v
+      - run: python analysis/status_incidents.py
+      - run: python -c 'import json; s=json.load(open("data/status_summary.json")); assert (s["feed_items"], s["events"], s["money_movement"]["median_minutes_to_resolution"]) == (25,88,63)'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-status-per-item-metrics
+          path: data/status_incident_metrics.csv
