@@ -1,0 +1,89 @@
+incident_id,title,status,timestamp_utc
+3kr7d2c1hhj6,Banking Circle Funding Maintenance,Scheduled,2026-09-30T09:22:00Z
+rvy0n3fk7r05,Customers Bank Gateway,Scheduled,2026-10-11T08:14:00Z
+rvy0n3fk7r05,Customers Bank Gateway,In progress,2026-10-11T08:15:00Z
+rvy0n3fk7r05,Customers Bank Gateway,Completed,2026-10-11T13:02:00Z
+0stxzzxlfk7v,Funding Delays,Investigating,2026-10-12T10:10:00Z
+0stxzzxlfk7v,Funding Delays,Identified,2026-10-12T10:37:00Z
+0stxzzxlfk7v,Funding Delays,Update,2026-10-12T10:45:00Z
+0stxzzxlfk7v,Funding Delays,Monitoring,2026-10-12T10:59:00Z
+0stxzzxlfk7v,Funding Delays,Resolved,2026-10-12T11:13:00Z
+lv12wgx7myxk,Derivatives Platform Maintenance,Scheduled,2026-10-12T11:27:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Scheduled,2026-10-12T17:17:00Z
+3kr7d2c1hhj6,Banking Circle Funding Maintenance,In progress,2026-10-12T18:00:00Z
+3kr7d2c1hhj6,Banking Circle Funding Maintenance,Completed,2026-10-13T05:35:00Z
+lv12wgx7myxk,Derivatives Platform Maintenance,In progress,2026-10-13T07:00:00Z
+lv12wgx7myxk,Derivatives Platform Maintenance,Completed,2026-10-13T07:17:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,Scheduled,2026-10-13T07:26:00Z
+lz7487sxw2lx,MultiversX (EGLD) Funding paused,Investigating,2026-10-13T10:25:00Z
+xh9nq2y7j44f,Dual-Currency Investments,Scheduled,2026-10-13T11:19:00Z
+xh9nq2y7j44f,Dual-Currency Investments,In progress,2026-10-13T11:30:00Z
+xh9nq2y7j44f,Dual-Currency Investments,Completed,2026-10-13T11:34:00Z
+lz7487sxw2lx,MultiversX (EGLD) Funding paused,Identified,2026-10-13T11:37:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,In progress,2026-10-13T13:00:00Z
+t0051spcf05s,Futures Trading Engine degraded performance,Monitoring,2026-10-13T13:08:00Z
+t0051spcf05s,Futures Trading Engine degraded performance,Resolved,2026-10-13T13:11:00Z
+lz7487sxw2lx,MultiversX (EGLD) Funding paused,Resolved,2026-10-13T13:41:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Update,2026-10-13T14:07:00Z
+fwkphyrcbchz,Derivatives Platform Maintenance,Scheduled,2026-10-13T14:11:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Update,2026-10-13T14:12:00Z
+fwkphyrcbchz,Derivatives Platform Maintenance,In progress,2026-10-13T14:30:00Z
+fwkphyrcbchz,Derivatives Platform Maintenance,Verifying,2026-10-13T14:37:00Z
+fwkphyrcbchz,Derivatives Platform Maintenance,Completed,2026-10-13T14:40:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Verifying,2026-10-13T14:40:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,In progress,2026-10-13T15:30:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Update,2026-10-13T15:30:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Update,2026-10-13T15:32:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Update,2026-10-13T15:33:00Z
+bw6nbw157h3g,Order Entry System Maintenance,Scheduled,2026-10-13T15:45:00Z
+rmg5hs95fhbj,Cross-Exchange Transfer Delays,Investigating,2026-10-13T15:55:00Z
+rgz6cwvh3l59,Krak Card & Instant Buy Transactions Declined,Identified,2026-10-13T15:58:00Z
+bw6nbw157h3g,Order Entry System Maintenance,In progress,2026-10-13T16:00:00Z
+t1k9pr3gdlwq,Network Infrastructure Upgrade,Completed,2026-10-13T16:05:00Z
+bw6nbw157h3g,Order Entry System Maintenance,Completed,2026-10-13T16:07:00Z
+rgz6cwvh3l59,Krak Card & Instant Buy Transactions Declined,Update,2026-10-13T16:08:00Z
+rmg5hs95fhbj,Cross-Exchange Transfer Delays,Resolved,2026-10-13T16:26:00Z
+7j3jbhy4bmgc,Dual-Currency Investments Maintenance,Scheduled,2026-10-13T16:48:00Z
+fdn7ft1lw243,H and HUMANITY Liquidation period extended,Scheduled,2026-10-13T16:57:00Z
+fdn7ft1lw243,H and HUMANITY Liquidation period extended,In progress,2026-10-13T17:00:00Z
+7j3jbhy4bmgc,Dual-Currency Investments Maintenance,Completed,2026-10-13T17:27:00Z
+lk3d8t3b26nb,Futures charts may display outdated data,Investigating,2026-10-13T19:47:00Z
+lk3d8t3b26nb,Futures charts may display outdated data,Identified,2026-10-13T20:49:00Z
+lk3d8t3b26nb,Futures charts may display outdated data,Monitoring,2026-10-13T21:16:00Z
+rgz6cwvh3l59,Krak Card & Instant Buy Transactions Declined,Resolved,2026-10-13T22:33:00Z
+5fthbkq4cszl,Interac e-Transfer (CAD) Scheduled Maintenance,Scheduled,2026-10-14T07:09:00Z
+5fthbkq4cszl,Interac e-Transfer (CAD) Scheduled Maintenance,In progress,2026-10-14T07:10:00Z
+5dyp52xj6j6v,Dual-Currency Investments,Scheduled,2026-10-14T07:56:00Z
+5dyp52xj6j6v,Dual-Currency Investments,In progress,2026-10-14T09:30:00Z
+5dyp52xj6j6v,Dual-Currency Investments,Completed,2026-10-14T09:42:00Z
+lk3d8t3b26nb,Futures charts may display outdated data,Update,2026-10-14T10:12:00Z
+5fthbkq4cszl,Interac e-Transfer (CAD) Scheduled Maintenance,Completed,2026-10-14T11:26:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,Scheduled,2026-10-14T11:53:00Z
+dmkh3hsd5wz1,USDT withdrawal delays on Ethereum,Investigating,2026-10-15T06:25:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,In progress,2026-10-15T07:00:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,In progress,2026-10-15T07:01:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,Verifying,2026-10-15T07:03:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,Update,2026-10-15T07:04:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,Update,2026-10-15T07:06:00Z
+08zrkpmtm7n0,Kraken Website and API Maintenance,Completed,2026-10-15T07:09:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,Update,2026-10-15T07:16:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,Update,2026-10-15T07:24:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,Update,2026-10-15T07:42:00Z
+pt6xsmtsb2vx,Derivatives Platform Maintenance,Completed,2026-10-15T07:58:00Z
+r2s4zf1wsdxf,"Polygon (POL), TRON (TRX) and Optimism (OP) Funding Delays",Investigating,2026-10-15T09:39:00Z
+r2s4zf1wsdxf,"Polygon (POL), TRON (TRX) and Optimism (OP) Funding Delays",Identified,2026-10-15T10:05:00Z
+r2s4zf1wsdxf,"Polygon (POL), TRON (TRX) and Optimism (OP) Funding Delays",Resolved,2026-10-15T10:28:00Z
+lk3d8t3b26nb,Futures charts may display outdated data,Resolved,2026-10-15T11:09:00Z
+dmkh3hsd5wz1,USDT withdrawal delays on Ethereum,Identified,2026-10-15T11:40:00Z
+dmkh3hsd5wz1,USDT withdrawal delays on Ethereum,Resolved,2026-10-15T12:03:00Z
+9fryrj2dy1nk,Blank favorites page for Pro App and Pro Web users who used Prop trading,Investigating,2026-10-15T13:32:00Z
+9fryrj2dy1nk,Blank favorites page for Pro App and Pro Web users who used Prop trading,Identified,2026-10-15T13:42:00Z
+3zghn0qj7y42,Canton Deposits and Withdrawals Maintenance,Scheduled,2026-10-15T15:41:00Z
+3zghn0qj7y42,Canton Deposits and Withdrawals Maintenance,In progress,2026-10-15T15:45:00Z
+3zghn0qj7y42,Canton Deposits and Withdrawals Maintenance,Update,2026-10-15T15:46:00Z
+3zghn0qj7y42,Canton Deposits and Withdrawals Maintenance,Completed,2026-10-15T16:39:00Z
+9fryrj2dy1nk,Blank favorites page for Pro App and Pro Web users who used Prop trading,Monitoring,2026-10-15T20:22:00Z
+qtpjmnnsrbfp,Conflux (CFX) Deposit Delays,Investigating,2026-10-16T08:12:00Z
+lwrtfcw4kxbc,Dual-Currency Investments,Scheduled,2026-10-16T11:05:00Z
+lwrtfcw4kxbc,Dual-Currency Investments,In progress,2026-10-16T13:00:00Z
+lwrtfcw4kxbc,Dual-Currency Investments,Completed,2026-10-16T13:25:00Z

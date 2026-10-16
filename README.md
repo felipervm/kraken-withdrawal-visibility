@@ -1,19 +1,17 @@
 # The Visibility Gap
-**Independent Data Analytics & Operations case study · Felipe Mattos**
 
-**[View the presentation](https://felipervm.github.io/kraken-withdrawal-visibility/site/)**
+**[Open the study](https://felipervm.github.io/kraken-withdrawal-visibility/site/)**
 
-I studied how operational event data could help distinguish an expected withdrawal hold, contradictory customer-facing information, and a case requiring specialized review. The purpose is decision support, not criticism of Kraken's operations.
+Independent analytical case by Felipe Mattos. The central question: how can approved information and data quality help direct operational investigations without making unwarranted claims about Kraken's systems?
 
-- **Verified public evidence:** Kraken's published *Crypto Withdrawal Delays* incident (July 29–31, 2026) spans **48h 33m**. This is **incident duration**, not customer delay. [Source & calculation](docs/PUBLIC-EVIDENCE.md).
-- **Synthetic model:** six fictional review cases routed to data quality, communication, policy, expected-hold or monitoring workflows. No fabricated rates are claimed as discoveries.
-- **Contribution demonstrated:** precise metric boundaries, event validation, prioritization, and clear ownership.
-- **Run:** `python analysis/decision_engine.py && python -m unittest discover -s tests -v`
-- **Deliverables:** [Executive decision brief](docs/DECISION-BRIEF.md) · [Public evidence notes](docs/PUBLIC-EVIDENCE.md) · [Python rules](analysis/decision_engine.py) · [Synthetic report](data/decision_report.json).
-- **Career interest:** Junior Data Analyst / Data Operations · Canadian citizen · Canada-based remote roles.
-- **Limitations:** Not affiliated with Kraken; no internal data, customer records, or actual incident-to-case linkage.
+**Real public-data analysis:** A frozen snapshot of the [official status feed](https://status.kraken.com/history.rss) covers **25 status items and 88 published updates**. For five resolved incidents classified as money movement by keyword, the median interval from first observed publication to published resolution is **63 minutes**. **This measures status-update cadence, not withdrawal waiting time.**
 
-Further methodology, assumptions, archived public research and fixture details are in [docs/](docs/) and [analysis/](analysis/).
+**Reproducibility:** [event CSV](data/status_events.csv) · [standard-library parser](analysis/status_incidents.py) · [summary](data/status_summary.json) · [test suite](tests/test_status_snapshot.py) · [methodology](docs/PUBLIC-EVIDENCE.md).
 
-## Public feed analysis (reviewed archive)
-A user-provided October 16 status-feed snapshot adds a useful real-data avenue: **25 feed items, 88 public updates**, with an illustrative median **63-minute interval between first posted update and resolution** among five resolved money-movement incidents. These are publication intervals, **not customer wait times**. [Review, scope and limitations](docs/FEED-REVIEW.md). The full parser and event-level input from the ZIP have not yet been merged.
+**Synthetic demonstration:** Six made-up cases illustrate how an analyst would route discrepancies or questions to Support, Data Operations, Product Operations, Risk/Compliance or monitoring. They are not performance findings.
+
+**Career objective:** Junior Data Analyst / Data Operations, Canadian citizen, interested in Canada-based remote roles.
+
+**Run:** `python analysis/status_incidents.py && python analysis/decision_engine.py && python -m unittest discover -s tests -v`
+
+Independent study; no internal Kraken access, customer records, or measured improvement. See [decision brief](docs/DECISION-BRIEF.md) for the proposed next steps.

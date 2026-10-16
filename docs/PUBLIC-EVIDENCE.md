@@ -1,28 +1,31 @@
-# Verified public evidence: Kraken status incident
+# Public status-page communication cadence — 2026-10-16 snapshot
 
-**Source:** [Kraken’s official status history](https://status.kraken.com/history), consulted October 16, 2026.
+**Source:** [Kraken official status history RSS](https://status.kraken.com/history.rss). A frozen subset of **88 public update events across 25 items** was supplied in the user-uploaded ZIP and checked with the parser and local unit tests.
 
-## Observation
+## Metrics from posted public updates
 
-The status history lists **Crypto Withdrawal Delays** as a resolved incident with a published interval:
+| Measure | Value |
+| --- | ---: |
+| Feed items | 25 (10 incidents, 15 maintenance windows) |
+| Public posts | 88 |
+| Money-movement incidents (keyword match) | 6 (5 resolved, 1 unresolved) |
+| Median first visible post → “Resolved” (resolved money-movement incidents) | **63 minutes** (n=5) |
+| Median first visible post → “Resolved” (all resolved incidents) | **130 minutes** (n=8) |
+| Median first → second posted update (money-movement incidents) | **31 minutes** |
+| Largest update gap (money-movement incidents) | **315 minutes**, USDT withdrawal delays on Ethereum |
+| Maintenance items with scheduled-to-in-progress interval below 1 hour | 7 of 14 |
 
-- Start: **July 29, 2026 at 15:33 UTC**
-- End: **July 31, 2026 at 16:06 UTC**
+**Caution:** These are gaps between public *publication timestamps*. They are not customer withdrawal delays, incident start-to-recovery times, support response times, platform availability, or indicators of wrongdoing. A long gap may indicate no change. Snapshot covers posts ranging from September 30 to October 16; concentration is October 11–16 and sample is not representative.
 
-Elapsed time between these timestamps: **48 hours 33 minutes**, or **2,913 minutes**.
+## Reproduction
 
-Calculation: July 29 15:33 to July 31 15:33 is 48 hours; plus 33 minutes.
+```bash
+python analysis/status_incidents.py
+python -m unittest discover -s tests -v
+```
 
-## What that means — and does not mean
+Inputs: [frozen public events](../data/status_events.csv). Output: [summary](../data/status_summary.json) and generated `data/status_incident_metrics.csv`.
 
-This is a directly observable **incident-level elapsed duration** in a public operational timeline. It demonstrates that structured status updates can be transformed into measurable event timelines.
+Optional updates: `python analysis/status_incidents.py --fetch` downloads and merges new RSS updates; `--feed-file path.xml` ingests a saved RSS export. Network fetching is **opt-in** and is not run in CI.
 
-It is **not** a measure of individual withdrawal delay, manual-review time, user waiting time, support response time, system downtime, or customer harm. It does not establish whether any individual message was inaccurate. Public incident history cannot be joined to internal support tickets or withdrawal records without authorized data access.
-
-The illustrative case-level routing model elsewhere in this repository is **entirely synthetic**, including its event states, repeat contacts, categories, and thresholds. No percentages from those cases are presented as real findings.
-
-## Proposed follow-on analysis with authorized data
-
-Reconcile approved case states against messages across app, email and support; assess missing approved next steps; distinguish scheduled holds from manual reviews; analyze seven-day repeat contact rates per eligible manual-review case and use privacy/compliance guardrails.
-
-Source reference: [Official status history](https://status.kraken.com/history).
+The older July 29–31 incident example remains a distinct historical reference rather than part of this snapshot. For analyst application, a next step would be a permitted comparison of status timelines and customer-safe messages using authorized internal datasets.

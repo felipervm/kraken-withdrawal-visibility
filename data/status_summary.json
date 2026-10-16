@@ -17,9 +17,22 @@
     "median_minutes_to_resolution": 63,
     "median_minutes_to_second_post": 31
   },
+  "longest_gap_all_incidents": {
+    "minutes": 1497,
+    "incident": "Futures charts may display outdated data",
+    "incident_id": "lk3d8t3b26nb"
+  },
   "longest_gap_money_movement": {
     "minutes": 315,
-    "incident": "USDT withdrawal delays on Ethereum"
+    "incident": "USDT withdrawal delays on Ethereum",
+    "incident_id": "dmkh3hsd5wz1"
   },
-  "method_note": "Timestamps are public status-page publication times; snapshot imported from user-provided ZIP and validated against its tests. Source CSV remains in supplied ZIP until the complete feed parser and its fixture are integrated."
+  "maintenance": {
+    "with_notice_data": 14,
+    "notice_under_1h": 7,
+    "notice_24h_or_more": 2,
+    "median_notice_hours": 1,
+    "without_in_progress_post": 1
+  },
+  "method_note": "Timestamps are status-page publication times, not problem start times or customer waiting times."
 }
