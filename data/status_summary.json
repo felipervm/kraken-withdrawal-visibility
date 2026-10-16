@@ -1,0 +1,25 @@
+{
+  "window_start_utc": "2026-09-30T09:22:00Z",
+  "window_end_utc": "2026-10-16T13:25:00Z",
+  "feed_items": 25,
+  "events": 88,
+  "incidents": 10,
+  "maintenance_items": 15,
+  "money_movement_incidents": 6,
+  "money_movement_incidents_open_at_snapshot": 1,
+  "all_incidents": {
+    "resolved": 8,
+    "median_minutes_to_resolution": 130,
+    "first_post_already_past_investigating": 2
+  },
+  "money_movement": {
+    "resolved": 5,
+    "median_minutes_to_resolution": 63,
+    "median_minutes_to_second_post": 31
+  },
+  "longest_gap_money_movement": {
+    "minutes": 315,
+    "incident": "USDT withdrawal delays on Ethereum"
+  },
+  "method_note": "Timestamps are public status-page publication times; snapshot imported from user-provided ZIP and validated against its tests. Source CSV remains in supplied ZIP until the complete feed parser and its fixture are integrated."
+}

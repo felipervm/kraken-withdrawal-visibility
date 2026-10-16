@@ -14,3 +14,6 @@ I studied how operational event data could help distinguish an expected withdraw
 - **Limitations:** Not affiliated with Kraken; no internal data, customer records, or actual incident-to-case linkage.
 
 Further methodology, assumptions, archived public research and fixture details are in [docs/](docs/) and [analysis/](analysis/).
+
+## Public feed analysis (reviewed archive)
+A user-provided October 16 status-feed snapshot adds a useful real-data avenue: **25 feed items, 88 public updates**, with an illustrative median **63-minute interval between first posted update and resolution** among five resolved money-movement incidents. These are publication intervals, **not customer wait times**. [Review, scope and limitations](docs/FEED-REVIEW.md). The full parser and event-level input from the ZIP have not yet been merged.
