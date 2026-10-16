@@ -1,0 +1,165 @@
+[
+  {
+    "case_id": "S-101",
+    "hold_category": "manual_review",
+    "repeat_contacts_7d": 3,
+    "approved_next_step_visible": false,
+    "events": [
+      {
+        "channel": "source",
+        "status": "reviewing",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "reviewing",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": true
+      },
+      {
+        "channel": "email",
+        "status": "reviewing",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  },
+  {
+    "case_id": "S-102",
+    "hold_category": "manual_review",
+    "repeat_contacts_7d": 1,
+    "approved_next_step_visible": true,
+    "events": [
+      {
+        "channel": "source",
+        "status": "action_required",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "reviewing",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": true
+      },
+      {
+        "channel": "email",
+        "status": "action_required",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  },
+  {
+    "case_id": "S-103",
+    "hold_category": "scheduled",
+    "repeat_contacts_7d": 2,
+    "approved_next_step_visible": false,
+    "events": [
+      {
+        "channel": "source",
+        "status": "reviewing",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "reviewing",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": true
+      },
+      {
+        "channel": "email",
+        "status": "reviewing",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  },
+  {
+    "case_id": "S-104",
+    "hold_category": "manual_review",
+    "repeat_contacts_7d": 1,
+    "approved_next_step_visible": true,
+    "events": [
+      {
+        "channel": "source",
+        "status": "reviewing",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "reviewing",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": true,
+        "support_reference": "DEMO-01"
+      },
+      {
+        "channel": "email",
+        "status": "reviewing",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  },
+  {
+    "case_id": "S-105",
+    "hold_category": "manual_review",
+    "repeat_contacts_7d": 0,
+    "approved_next_step_visible": true,
+    "events": [
+      {
+        "channel": "source",
+        "status": "completed",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "completed",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": true
+      },
+      {
+        "channel": "email",
+        "status": "completed",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  },
+  {
+    "case_id": "S-106",
+    "hold_category": "manual_review",
+    "repeat_contacts_7d": 2,
+    "approved_next_step_visible": false,
+    "events": [
+      {
+        "channel": "source",
+        "status": "reviewing",
+        "at": "2026-10-16T12:00:00Z",
+        "approved": true,
+        "reference_allowed": false
+      },
+      {
+        "channel": "app",
+        "status": "reviewing",
+        "at": "2026-10-16T12:02:00Z",
+        "approved": false
+      },
+      {
+        "channel": "email",
+        "status": "reviewing",
+        "at": "2026-10-16T12:04:00Z",
+        "approved": true
+      }
+    ]
+  }
+]

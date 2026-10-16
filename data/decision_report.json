@@ -1,0 +1,55 @@
+{
+  "case_count": 6,
+  "route_counts": {
+    "COMMUNICATION_GAP": 1,
+    "DATA_QUALITY": 1,
+    "EXPECTED_HOLD": 1,
+    "MONITOR": 1,
+    "POLICY_REVIEW": 2
+  },
+  "decisions": [
+    {
+      "case_id": "S-101",
+      "route": "COMMUNICATION_GAP",
+      "why": "Repeated contacts with no approved next-step visibility",
+      "owner": "Support / Product Operations",
+      "next": "Review approved customer-safe next-step messaging; preserve security constraints"
+    },
+    {
+      "case_id": "S-102",
+      "route": "DATA_QUALITY",
+      "why": "Conflicting or misordered channel information",
+      "owner": "Data / Product Operations",
+      "next": "Trace source timestamps, synchronization, and approved state mapping"
+    },
+    {
+      "case_id": "S-103",
+      "route": "EXPECTED_HOLD",
+      "why": "Scheduled hold is a separate class from manual review",
+      "owner": "Support",
+      "next": "Confirm approved self-service guidance; no release recommendation"
+    },
+    {
+      "case_id": "S-104",
+      "route": "POLICY_REVIEW",
+      "why": "Potential unapproved information surfaced",
+      "owner": "Risk / Compliance",
+      "next": "Contain disclosure and seek policy review; do not reveal review rationale"
+    },
+    {
+      "case_id": "S-105",
+      "route": "MONITOR",
+      "why": "No immediate discrepancy in available synthetic signals",
+      "owner": "Operations Analytics",
+      "next": "Track repeat contacts and exception trends; no automated action"
+    },
+    {
+      "case_id": "S-106",
+      "route": "POLICY_REVIEW",
+      "why": "Potential unapproved information surfaced",
+      "owner": "Risk / Compliance",
+      "next": "Contain disclosure and seek policy review; do not reveal review rationale"
+    }
+  ],
+  "disclosure": "All events, flags and outcomes are fictional. Analyst triage only; no evidence of Kraken operational defects or measured impact."
+}

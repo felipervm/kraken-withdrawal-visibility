@@ -57,3 +57,21 @@ Proposed evaluation: define permitted communication states with Risk/Compliance/
 
 ## Sharing
 The website includes a canonical URL, social sharing metadata and an FM favicon. The sharing image is existing editorial artwork and may be cropped by social platforms. GitHub Pages must be enabled for previews to resolve.
+
+## Operational decision intelligence — October 2026 extension
+
+The original study asked whether approved withdrawal-review messages remain consistent across app, email and support. I extended it with a **case-level analyst routing model** that separates expected scheduled holds, customer-visibility gaps, cross-channel data quality, policy-sensitive disclosure, and cases that only warrant monitoring.
+
+- [Executive decision brief](docs/DECISION-BRIEF.md)
+- [Synthetic event fixture](data/decision_cases.json) and [generated decision report](data/decision_report.json)
+- [Deterministic decision rules](analysis/decision_engine.py) and [unit tests](tests/test_decision_engine.py)
+- New decision-intelligence section on the existing [live project website](https://felipervm.github.io/kraken-withdrawal-visibility/)
+
+Run:
+
+```bash
+python analysis/decision_engine.py
+python -m unittest discover -s tests -v
+```
+
+All case classifications are fictional analyst workflow suggestions, not automated financial actions or real Kraken operating rules. The sample threshold (two repeat contacts) is purely illustrative. No causal impact or actual problem prevalence is claimed.
