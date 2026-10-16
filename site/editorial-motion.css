@@ -1,0 +1,29 @@
+/* Editorial motion system inspired by architectural portfolios.
+   Progressive enhancement: never hide content unless motion JS initialized. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+.motion-progress{position:fixed;z-index:100;inset:0 auto auto 0;width:100%;height:3px;transform:scaleX(0);transform-origin:left;background:#8c64ff;pointer-events:none}
+.motion-ready .motion-reveal{opacity:0;transform:translate3d(0,48px,0);transition:opacity 1s var(--motion-ease),transform 1.2s var(--motion-ease)}
+.motion-ready .motion-reveal.motion-in{opacity:1;transform:translate3d(0,0,0)}
+.motion-ready .motion-reveal.motion-delay-1{transition-delay:120ms}
+.motion-ready .motion-reveal.motion-delay-2{transition-delay:240ms}
+.motion-ready .motion-reveal.motion-delay-3{transition-delay:360ms}
+.motion-ready .motion-headline{overflow:visible}
+.motion-ready .motion-headline .motion-line{display:block;overflow:hidden}
+.motion-ready .motion-headline .motion-line > span{display:block;transform:translate3d(0,110%,0);opacity:0;transition:transform 1.15s var(--motion-ease),opacity 1.15s var(--motion-ease)}
+.motion-ready .motion-headline.motion-in .motion-line > span{transform:translate3d(0,0,0);opacity:1}
+.motion-ready .motion-headline .motion-line:nth-child(2)>span{transition-delay:120ms}
+.motion-ready .motion-headline .motion-line:nth-child(3)>span{transition-delay:240ms}
+.motion-image{overflow:hidden;position:relative}
+.motion-image img{animation:none!important;will-change:transform;transform:scale(1.15) translate3d(0,0,0);transition:transform 1.65s var(--motion-ease);display:block}
+.motion-image.motion-in img{transform:scale(1.02) translate3d(0,0,0)}
+.motion-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#7132f5 0%,#241347 100%);z-index:1;transform-origin:right;transform:scaleX(1);transition:transform 1.35s var(--motion-ease);pointer-events:none}
+.motion-image.motion-in::after{transform:scaleX(0)}
+.motion-ready .rec-grid article{opacity:0;transform:translate3d(0,42px,0);transition:transform 1s var(--motion-ease),opacity 1s var(--motion-ease)}
+.motion-ready .rec-grid.motion-in article{opacity:1;transform:translate3d(0,0,0)}
+.motion-ready .rec-grid.motion-in article:nth-child(2){transition-delay:120ms}
+.motion-ready .rec-grid.motion-in article:nth-child(3){transition-delay:240ms}
+.motion-ready .hero-analyst-line.motion-reveal{transform:translateY(24px)}
+.motion-ready .hero-analyst-line.motion-in{transform:translateY(0)}
+@media(hover:hover) and (pointer:fine){.motion-image img{transition:transform 1.65s var(--motion-ease)}.motion-image:hover img{transform:scale(1.065) translate3d(0,-3px,0)}}
+@media(max-width:760px){.motion-ready .motion-reveal{transform:translateY(25px)}.motion-image::after{transition-duration:.9s}}
+@media(prefers-reduced-motion:reduce){.motion-progress{display:none}.motion-ready .motion-reveal,.motion-ready .rec-grid article,.motion-ready .motion-headline .motion-line>span{opacity:1!important;transform:none!important;transition:none!important}.motion-image img{animation:none!important;transform:none!important;transition:none!important}.motion-image::after{display:none!important}}
