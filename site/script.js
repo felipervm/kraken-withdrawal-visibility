@@ -52,3 +52,21 @@ motionPreference.addEventListener('change', () => {
  });
  if (motionPreference.matches) document.querySelector('.status-body').getAnimations().forEach(animation => animation.cancel());
 });
+
+
+/* Public-source metrics: render snapshot output, never manually retype rates. */
+(async()=>{const section=document.getElementById("public-evidence");if(!section)return;
+ try{
+  const response=await fetch("../data/status_summary.json",{cache:"no-cache"});if(!response.ok)return;
+  const d=await response.json();
+  const heading=section.querySelector("h2");
+  if(heading)heading.textContent="From public updates to reproducible evidence.";
+  const lead=section.querySelector(".public-evidence-lead");
+  if(lead)lead.textContent="I analyzed the Kraken public status-feed snapshot, reconstructing the sequence of published events across incidents and scheduled maintenance. The metrics below come from the committed source-event CSV and a reproducible Python script.";
+  const cards=section.querySelectorAll(".public-evidence-metrics>div");
+  const metrics=[[d.feed_items,"Public feed items in the frozen snapshot"],[d.events,"Published status updates"],[d.money_movement.median_minutes_to_resolution+" min","Median first visible post to published resolution among "+d.money_movement.resolved+" resolved money-movement incidents"]];
+  metrics.forEach((pair,i)=>{const card=cards[i];if(!card)return;const strong=card.querySelector("strong"),text=card.querySelector("span");if(strong)strong.textContent=String(pair[0]);if(text)text.textContent=pair[1]});
+  const paras=section.querySelectorAll(".public-evidence-lead");
+  if(paras[1])paras[1].textContent="These are public publication timestamps, not withdrawal waiting time, system downtime or evidence of a customer-level issue. Data covers a limited, non-representative snapshot.";
+ }catch(error){console.warn("Public snapshot data unavailable",error)}
+})();
