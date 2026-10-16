@@ -1,77 +1,16 @@
-# The Visibility Gap — Kraken withdrawal-review communications
+# The Visibility Gap
+**Independent Data Analytics & Operations case study · Felipe Mattos**
 
-An independent study by **Felipe Mattos**, put together while learning more about Kraken. It follows a question about communication during withdrawal reviews, connects public sources with a synthetic data model, and sketches a possible customer experience. Not affiliated with Kraken.
+**[View the presentation](https://felipervm.github.io/kraken-withdrawal-visibility/site/)**
 
-## Business question
-Can approved status and next-step communication across manual withdrawal reviews become more consistent without weakening security?
+I studied how operational event data could help distinguish an expected withdrawal hold, contradictory customer-facing information, and a case requiring specialized review. The purpose is decision support, not criticism of Kraken's operations.
 
-## Career intent
-I built this independent study to demonstrate how I approach data, operations and product questions while seeking to work **inside Kraken**. It is not a service or consulting pitch.
+- **Verified public evidence:** Kraken's published *Crypto Withdrawal Delays* incident (July 29–31, 2026) spans **48h 33m**. This is **incident duration**, not customer delay. [Source & calculation](docs/PUBLIC-EVIDENCE.md).
+- **Synthetic model:** six fictional review cases routed to data quality, communication, policy, expected-hold or monitoring workflows. No fabricated rates are claimed as discoveries.
+- **Contribution demonstrated:** precise metric boundaries, event validation, prioritization, and clear ownership.
+- **Run:** `python analysis/decision_engine.py && python -m unittest discover -s tests -v`
+- **Deliverables:** [Executive decision brief](docs/DECISION-BRIEF.md) · [Public evidence notes](docs/PUBLIC-EVIDENCE.md) · [Python rules](analysis/decision_engine.py) · [Synthetic report](data/decision_report.json).
+- **Career interest:** Junior Data Analyst / Data Operations · Canadian citizen · Canada-based remote roles.
+- **Limitations:** Not affiliated with Kraken; no internal data, customer records, or actual incident-to-case linkage.
 
-## Live study
-https://felipervm.github.io/kraken-withdrawal-visibility/
-
-## Deliverables
-- `site/index.html` — visual research narrative and conceptual communication design
-- `data/synthetic_review_cases.csv` — 800 seeded, entirely synthetic test cases
-- `data/data_dictionary.json` — schema and simulation disclosure
-- `analysis/withdrawal_visibility.ipynb` — reproducible quality checks and analysis
-- `analysis/qa_queries.sql` — portable SQL examples
-- `analysis/validate.py` — CSV contracts and cross-checks using SQLite
-- `analysis/event_consistency_demo.py` — derive cross-channel exceptions from illustrative synthetic events
-- `analysis/generate_fixture.py` — deterministic additional fixture generator
-- `data/generated_review_cases.csv` — additional generated fixture; does not reconstruct original rows
-- `docs/RESEARCH.md` — evidence, competing explanations and proposed validation
-
-## Run the analysis
-From the repository root, these checks require only Python's standard library:
-```bash
-python analysis/validate.py
-python analysis/event_consistency_demo.py
-python analysis/generate_fixture.py
-python analysis/validate.py data/generated_review_cases.csv
-```
-
-For the notebook:
-```bash
-python -m pip install pandas jupyter
-jupyter notebook analysis/withdrawal_visibility.ipynb
-```
-
-The data deliberately include injected quality exceptions. All resulting metrics reflect a **simulation**; no real Kraken customer or operations data were used.
-
-## Scope and limitations
-Official Kraken help documentation distinguishes scheduled withdrawal holds from reviews and already describes hold-visibility tools. The two linked customer reports were readable on October 8, 2026; their underlying cases remain uncorroborated. The question is cross-channel continuity in eligible manual reviews. No prevalence, loss, release SLA or causal effect is claimed.
-
-The original CSV has 800 unique IDs, 232 injected exception rows and zero union-flag mismatches. Its original generator was not supplied. The additional seeded generator exposes a new reproducible simulation with matching category totals; its rows and contact counts differ from the original. Flags are pre-labeled simulation inputs, not real event-based detection.
-
-## Preview the page
-```bash
-python -m http.server 8765
-```
-Open `http://localhost:8765/site/`. GitHub Pages uses the root redirect to `site/`. The page has no build step. Images and IBM Plex Sans fonts are bundled locally; artwork and design research are documented in `docs/VISUAL-NOTES.md`.
-
-Proposed evaluation: define permitted communication states with Risk/Compliance/Support, audit message consistency, and only test approved improvements. Primary metric: 7-day repeat support contacts per eligible review. Guardrails: fraud, customer understanding, support accessibility, complaints and improper disclosure.
-
-© Felipe Mattos — Independent educational study, not affiliated with Kraken.
-
-## Sharing
-The website includes a canonical URL, social sharing metadata and an FM favicon. The sharing image is existing editorial artwork and may be cropped by social platforms. GitHub Pages must be enabled for previews to resolve.
-
-## Operational decision intelligence — October 2026 extension
-
-The original study asked whether approved withdrawal-review messages remain consistent across app, email and support. I extended it with a **case-level analyst routing model** that separates expected scheduled holds, customer-visibility gaps, cross-channel data quality, policy-sensitive disclosure, and cases that only warrant monitoring.
-
-- [Executive decision brief](docs/DECISION-BRIEF.md)
-- [Synthetic event fixture](data/decision_cases.json) and [generated decision report](data/decision_report.json)
-- [Deterministic decision rules](analysis/decision_engine.py) and [unit tests](tests/test_decision_engine.py)
-- New decision-intelligence section on the existing [live project website](https://felipervm.github.io/kraken-withdrawal-visibility/)
-
-Run:
-
-```bash
-python analysis/decision_engine.py
-python -m unittest discover -s tests -v
-```
-
-All case classifications are fictional analyst workflow suggestions, not automated financial actions or real Kraken operating rules. The sample threshold (two repeat contacts) is purely illustrative. No causal impact or actual problem prevalence is claimed.
+Further methodology, assumptions, archived public research and fixture details are in [docs/](docs/) and [analysis/](analysis/).
