@@ -16,7 +16,9 @@
 <meta name="twitter:image" content="https://felipervm.github.io/kraken-withdrawal-visibility/site/assets/review-path-v2.webp"><title>While it’s under review — Felipe Mattos</title>
 <link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="style.css?v=20261016-motion-1">
 <link rel="preload" as="image" href="assets/review-path-v2.webp">
-<link rel="stylesheet" href="editorial-motion.css?v=20261016-1">
+<link rel="stylesheet" href="gsap-motion.css?v=20261016-2">
+<script>window.tailwind = window.tailwind || {};tailwind.config = { corePlugins: { preflight: false } };</script>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header><a class="brand" href="#top">fm<span> / Felipe Mattos</span></a><nav aria-label="Study navigation"><a href="#evidence">Research</a><a href="#recommendation">Recommendation</a><a href="#decision-intelligence">Decision model</a><a href="#concept">The idea</a><a href="#about">A little context ↗</a></nav></header>
@@ -31,6 +33,14 @@
 <h2>The review has a reason.<br>The waiting still needs context.</h2>
 <div class="split"><p class="large">While learning more about Kraken, I read the withdrawal guidance and came across two customer posts about missing updates and hard-to-find support tickets.</p><div><p>That made me curious about a smaller question: when a withdrawal is being reviewed, do the app, email and support give someone the same next step?</p><p>I followed the public guidance, put together a small data model and sketched an experience around that question. I thought it was worth sharing because it touches both customer understanding and the work support teams have to do.</p><p class="note">I could read the posts, but couldn’t verify what happened inside those accounts. The research notes keep that distinction clear.</p></div></div>
 <div class="brief-strip"><span>Read the guidance</span><span>Follow the customer question</span><span>Model a way to check it</span><span>Sketch the next step</span></div></section>
+<section class="motion-project-gallery motion-story-group" id="visual-research" aria-labelledby="visual-research-heading">
+<div class="motion-gallery-inner"><div class="section-label motion-story-item">Visual research / independent study</div>
+<h2 id="visual-research-heading" class="motion-story-item">One review.<br>Different signals.</h2>
+<p class="motion-story-item">The same withdrawal can appear differently across app, email and support. These visualizations illustrate the analytical question; they are not Kraken product screenshots.</p>
+<div class="motion-image-group motion-gallery-grid">
+<figure><div class="motion-project-frame relative overflow-hidden"><div class="motion-parallax-shell"><img class="motion-project-image block w-full h-full object-cover" src="assets/channel-continuity-v2.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Editorial illustration showing visual continuity between three information channels."></div></div><figcaption>01 / Reconcile approved status across channels</figcaption></figure>
+<figure><div class="motion-project-frame relative overflow-hidden"><div class="motion-parallax-shell"><img class="motion-project-image block w-full h-full object-cover" src="assets/review-path-v2.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Abstract editorial artwork showing the progression of a withdrawal review."></div></div><figcaption>02 / Route exceptions to the right operational team</figcaption></figure>
+</div></div></section>
 <section class="paper continuity"><div class="split"><div><div class="section-label">The question behind the study</div><h2>One review.<br>Three places<br>to look.</h2><p class="large">A person may check the app, open an email and ask support about the same withdrawal.</p><p>My idea is to check whether the information they’re allowed to see stays consistent across those places. The goal is a clearer next step while the security review continues.</p></div>
 <figure class="visual-card"><img src="assets/channel-continuity-v2.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Three translucent panels joined by a continuous purple ribbon, illustrating continuity between channels."><figcaption><span>App</span><span>Email</span><span>Support</span></figcaption><p class="visual-caption">The same review, seen from different places.</p></figure></div>
 <div class="channel-flow" aria-label="Proposed flow of approved review information"><div><span class="flow-dot">01</span><strong>Approved review state</strong><small>What can be shared right now?</small></div><span class="flow-arrow" aria-hidden="true">→</span><div><span class="flow-dot">02</span><strong>App · email · support</strong><small>Does the message agree across channels?</small></div><span class="flow-arrow" aria-hidden="true">→</span><div><span class="flow-dot">03</span><strong>A useful next step</strong><small>Does the person know what to do?</small></div></div></section>
@@ -84,6 +94,8 @@
 </script>
 </main><footer><a class="brand" href="#top">fm<span> / Felipe Mattos</span></a><div class="footer-links"><a href="https://www.linkedin.com/in/felipervm">LinkedIn ↗</a><a href="https://github.com/felipervm/kraken-withdrawal-visibility">GitHub ↗</a><a href="mailto:felipervm22@gmail.com">Email ↗</a></div><p>Independent study · Not affiliated with Kraken · Analysis uses synthetic data · October 2026</p></footer><script src="script.js?v=20261016-motion-1"></script>
 
-<script src="editorial-motion.js?v=20261016-1" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="gsap-motion.js?v=20261016-2" defer></script>
 </body></html>
 
